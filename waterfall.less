@@ -1,0 +1,136 @@
+
+@box-padding: 0.3rem 1.2rem;
+// @box-padding: 0;
+// @box-margin: 0 0 0.4rem;
+@box-margin: 0 0 2px;
+@borderRadius: 1rem;
+
+@bgcol: #333;
+@fgcol: #777;
+@bdcol: #bbb;
+
+
+html {
+  box-sizing: border-box;
+  font-size: 90%;
+  font-family: verdana;
+  color: @bdcol;
+}
+
+
+sup, sub{
+
+}
+
+*, *:before, *:after {
+  // box-sizing: border-box;
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  // font-size: 1rem;
+}
+
+p{
+  text-align:left;
+}
+
+body{
+  background: @bgcol;
+  line-height: 1rem;
+}
+
+
+h1, h2, h3, h4, h5, h6, p{
+  margin: 1rem 0 1rem 0;
+  color: lighten(@bdcol, 20%);
+  text-shadow: none;
+}
+
+block::after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+
+
+
+.column {
+  box-sizing: border-box;
+  float:left;
+  background: @fgcol;
+  // border:1px solid fade(@bdcol, 20%);
+  padding: @box-padding;
+  margin: @box-margin;
+  font-family: verdana;
+  text-align: center;
+  color: darken(@fgcol, 20%);
+  text-shadow: -1px -1px 0px darken(@bdcol, 10%);
+  border-radius: @borderRadius;
+  // display: table-cell;
+}
+
+
+
+row {
+  // display: table-row;
+  display: table;
+  width: 100%;
+  margin: @box-margin;
+  // max-width: 800px;
+}
+
+row > * {
+  display: table-cell;
+  float: none;
+}
+
+// no ie9 :(
+// row::after {
+//   visibility: hidden;
+//   display: block;
+//   content: "";
+//   clear: both;
+//   height: 0;
+// }
+
+container {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+col1   { &:extend(.column); width: percentage(1);             }
+col2   { &:extend(.column); width: percentage(1/2);           }
+col3   { &:extend(.column); width: percentage(1/3);           }
+col3x2 { &:extend(.column); width: percentage(1/1.5);         }
+col4   { &:extend(.column); width: percentage(1/4);           }
+col4x2 { &:extend(.column); width: percentage(1/2);           }
+col4x3 { &:extend(.column); width: percentage(1*0.75);        }
+col5   { &:extend(.column); width: percentage(1/5);           }
+col5x2 { &:extend(.column); width: percentage(1*0.4);         }
+col5x3 { &:extend(.column); width: percentage(1*0.6);         }
+col5x4 { &:extend(.column); width: percentage(1*0.8);         }
+col6   { &:extend(.column); width: percentage(1/6);           }
+col6x2 { &:extend(.column); width: percentage(1/3);           }
+col6x3 { &:extend(.column); width: percentage(1/2);           }
+col6x4 { &:extend(.column); width: percentage(1/1.5);         }
+col6x5 { &:extend(.column); width: percentage(1*0.83333335);  }
+col7   { &:extend(.column); width: percentage(1/7);           }
+col7x2 { &:extend(.column); width: percentage(1*0.28571428);  }
+col7x3 { &:extend(.column); width: percentage(1*0.42857142);  }
+col7x4 { &:extend(.column); width: percentage(1*0.57142856);  }
+col7x5 { &:extend(.column); width: percentage(1*0.7142857);   }
+col7x6 { &:extend(.column); width: percentage(1*0.85714284);  }
+col8   { &:extend(.column); width: percentage(1/8);           }
+col8x2 { &:extend(.column); width: percentage(1/4);           }
+col8x3 { &:extend(.column); width: percentage(1*0.375);       }
+col8x4 { &:extend(.column); width: percentage(1/2);           }
+col8x5 { &:extend(.column); width: percentage(1*0.625);       }
+col8x6 { &:extend(.column); width: percentage(1*0.75);        }
+col8x7 { &:extend(.column); width: percentage(1*0.875);       }
+
+
+
