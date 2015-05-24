@@ -1,3 +1,7 @@
+body {
+  background: green;
+}
+
 html {
   box-sizing: border-box;
   font-size: 90%;
@@ -10,7 +14,6 @@ html {
   box-sizing: inherit;
   padding: 0;
   margin: 0;
-  vertical-align: top;
 }
 p {
   text-align: left;
@@ -67,38 +70,27 @@ col8x6,
 col8x7 {
   box-sizing: border-box;
   float: left;
+  padding: 0.4rem 0.4rem;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child,
-[row] > * p:first-child {
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  background: rgba(255, 255, 255, 0.3);
+row {
+  display: table;
+  width: 100%;
+  margin-top: 2px;
+  margin-bototm: 2px;
+}
+row > * {
+  display: table-cell;
+  float: none;
+}
+.marg {
+  border: 1px solid red!important;
+  background: #fff;
+  display: block;
+  height: 100%;
+  float: none;
+  display: table-cell;
 }
 container {
   display: block;

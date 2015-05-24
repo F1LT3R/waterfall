@@ -10,7 +10,8 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          "waterfall.css": "waterfall.less"
+          "waterfall.css": "waterfall.less",
+          "test.css": "test.less"
         }
       },
     },
@@ -21,19 +22,19 @@ module.exports = function(grunt) {
           port: 8888,
           base: './'
         }
-      }
+      },
     },
 
     watch: {
       scripts: {
-        files: ['waterfall.less'],
+        files: ['*.less'],
         tasks: ['less'],
         options: {
           livereload: true,
         },
       },
       html: {
-        files: ['index.html'],
+        files: ['*.html', '*.js'],
         options: {
           livereload: true,
         },
