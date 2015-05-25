@@ -43,13 +43,8 @@ function uniformHeights(){
 
         stack[line].push(node);
       }
-
-
-      // console.log(elem.childNodes[i].firstElementChild);
     };
 
-
-    console.log(stack);
 
     for (var row in stack) {
 
@@ -57,7 +52,7 @@ function uniformHeights(){
 
       // Reset heights
       stack[row].forEach(function(elem){
-        elem.firstElementChild.setAttribute('style', 'height:auto;');
+        elem.firstElementChild.style.height = 'auto';
       });
 
       // Get Maximums
@@ -69,8 +64,23 @@ function uniformHeights(){
       });
 
       // Set all by maximum
-      stack[row].forEach(function(elem){
-        elem.firstElementChild.setAttribute('style', 'height:'+ maxHeight+'px;');
+      var len = stack[row].length;
+      console.log(len);
+
+      stack[row].forEach(function(elem, i){
+
+        elem.style.paddingLeft  = '';
+        elem.style.paddingRight = '';
+
+        if (i === 0) {
+          elem.style.paddingLeft = 0;
+        } else if (i === len-1) {
+          elem.style.paddingRight = 0;
+        }
+
+        elem.firstElementChild.style.height = maxHeight+'px';
+
+
       });
     }
 
