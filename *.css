@@ -719,8 +719,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-xmp {
+h6 {
   margin: 1rem 0 1rem 0;
   text-shadow: none;
 }
@@ -795,7 +794,7 @@ col8x7 {
   padding: .3rem .3rem;
 }
 .pad,
-[pad] > * > :first-child {
+[row][pad] > * > :first-child {
   padding: 0.6rem 0.6rem;
   border: 1px solid rgba(255, 255, 255, 0.8);
   background: rgba(255, 255, 255, 0.3);
@@ -958,6 +957,9 @@ col8x7 {
   width: 87.5%;
 }
 @media (max-width: 9999px) {
+  body {
+    background: #FA0;
+  }
   guide:before {
     content: "giant";
   }
@@ -1050,6 +1052,9 @@ col8x7 {
   }
 }
 @media (max-width: 1200px) {
+  body {
+    background: #0AC;
+  }
   guide:before {
     content: "large";
   }
@@ -1142,6 +1147,9 @@ col8x7 {
   }
 }
 @media (max-width: 800px) {
+  body {
+    background: #CC0;
+  }
   guide:before {
     content: "medium";
   }
@@ -1234,6 +1242,9 @@ col8x7 {
   }
 }
 @media (max-width: 500px) {
+  body {
+    background: #0c0;
+  }
   guide:before {
     content: "small";
   }

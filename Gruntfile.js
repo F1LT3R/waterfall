@@ -8,11 +8,12 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     less: {
-      development: {
-        files: {
-          '*.css': ['*.less']
-        }
-      },
+      src: {
+        expand: true,
+        cwd:    "./",
+        src:    "*.less",
+        ext:    ".css",
+      }
     },
 
     connect: {
