@@ -10,8 +10,7 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          "waterfall.css": "waterfall.less",
-          "test.css": "test.less"
+          '*.css': ['*.less']
         }
       },
     },
