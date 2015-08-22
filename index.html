@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="index.css" />
+<link rel="stylesheet" href="waterfall.css" />
+<!-- <link rel="stylesheet" href="waterfall-old.css" /> -->
 </head>
 <body>
 
@@ -11,86 +12,86 @@
 <h1>Waterfall</h1>
 
 <block row pad>
-    <col4 s1 m4 l8 g1>
+    <div s1 m4 l8 g1>
       <p>Waterfall is a simple CSS layout grid based on fractions.</p>
-    </col4>
+    </div>
 
-    <col4 s2 m4 l8x7 g1>
+    <div s2 m4 l8x7 g1>
       <p>Waterfall us designed for desktop and mobile and is compatible with Internet Explorer 9 and above.</p>
-    </col4>
+    </div>
 
-    <col4 s2 m4 l8x7 g1>
+    <div s2 m4 l8x7 g1>
       <p>Waterfall is not standards compliant, because it uses custom HTML tags and attribute.</p>
-    </col4>
+    </div>
 
-    <col4 s1 m4 l8 g1>
+    <div s1 m4 l8 g1>
       <p>Waterfall is at version v0.0.</p>
-    </col4>
+    </div>
 </block>
 
 <h2>Responsive Columns</h2>
 
 <xmp>
-  <col4 s1 m3 l2 g4>A</col4>
-  <col4 s2 m6 l4 g4>B</col4>
-  <col4 s2 m3 l8 g4>C</col4>
-  <col4 s1 m6 l8 g4>D</col4>
+  <div col s1 m3 l2 g4>A</div>
+  <div col s2 m6 l4 g4>B</div>
+  <div col s2 m3 l8 g4>C</div>
+  <div col s1 m6 l8 g4>D</div>
 </xmp>
 
 <block class="eg">
-  <col4 s1 m3 l2 g4>A</col4>
-  <col4 s2 m6 l4 g4>B</col4>
-  <col4 s2 m3 l8 g4>C</col4>
-  <col4 s1 m6 l8 g4>D</col4>
+  <div s1 m3 l2 g4>A</div>
+  <div s2 m6 l4 g4>B</div>
+  <div s2 m3 l8 g4>C</div>
+  <div s1 m6 l8 g4>D</div>
 </block>
 
 
 <h2>Fractional Columns</h2>
 
 <block class="eg">
-  <col1>1</col1>
+  <div s1>1</div>
 
-  <col2>&frac12;</col2>
-  <col2>&frac12;</col2>
+  <div g2>&frac12;</div>
+  <div g2>&frac12;</div>
 
-  <col3>&frac13;</col3>
-  <col3>&frac13;</col3>
-  <col3>&frac13;</col3>
+  <div g3>&frac13;</div>
+  <div g3>&frac13;</div>
+  <div g3>&frac13;</div>
 
-  <col4>&frac14;</col4>
-  <col4>&frac14;</col4>
-  <col4>&frac14;</col4>
-  <col4>&frac14;</col4>
+  <div g4>&frac14;</div>
+  <div g4>&frac14;</div>
+  <div g4>&frac14;</div>
+  <div g4>&frac14;</div>
 
-  <col5>&frac15;</col5>
-  <col5>&frac15;</col5>
-  <col5>&frac15;</col5>
-  <col5>&frac15;</col5>
-  <col5>&frac15;</col5>
+  <div g5>&frac15;</div>
+  <div g5>&frac15;</div>
+  <div g5>&frac15;</div>
+  <div g5>&frac15;</div>
+  <div g5>&frac15;</div>
 
-  <col6>&frac16;</col6>
-  <col6>&frac16;</col6>
-  <col6>&frac16;</col6>
-  <col6>&frac16;</col6>
-  <col6>&frac16;</col6>
-  <col6>&frac16;</col6>
+  <div g6>&frac16;</div>
+  <div g6>&frac16;</div>
+  <div g6>&frac16;</div>
+  <div g6>&frac16;</div>
+  <div g6>&frac16;</div>
+  <div g6>&frac16;</div>
 
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
 
-  <col8>&frac18;</col8>
-  <col8>&frac18;</col8>
-  <col8>&frac18;</col8>
-  <col8>&frac18;</col8>
-  <col8>&frac18;</col8>
-  <col8>&frac18;</col8>
-  <col8>&frac18;</col8>
-  <col8>&frac18;</col8>
+  <div g8>&frac18;</div>
+  <div g8>&frac18;</div>
+  <div g8>&frac18;</div>
+  <div g8>&frac18;</div>
+  <div g8>&frac18;</div>
+  <div g8>&frac18;</div>
+  <div g8>&frac18;</div>
+  <div g8>&frac18;</div>
 </block>
 
 
@@ -101,187 +102,187 @@
 <h3>Thirds</h3>
 
 <block class="eg">
-  <col3>&frac13;</col3>
-  <col3>&frac13;</col3>
-  <col3>&frac13;</col3>
+  <div g3>&frac13;</div>
+  <div g3>&frac13;</div>
+  <div g3>&frac13;</div>
 
-  <col3x2>&frac23;</col3x2>
-  <col3>&frac13;</col3>
+  <div g3x2>&frac23;</div>
+  <div g3>&frac13;</div>
 </block>
 
 
 <h3>Forths</h3>
 
 <block class="eg">
-  <col4>&frac14;</col4>
-  <col4>&frac14;</col4>
-  <col4>&frac14;</col4>
-  <col4>&frac14;</col4>
+  <div g4>&frac14;</div>
+  <div g4>&frac14;</div>
+  <div g4>&frac14;</div>
+  <div g4>&frac14;</div>
 
-  <col4x2>&frac12;</col4x2>
-  <col4>&frac14;</col4>
-  <col4>&frac14;</col4>
+  <div g2>&frac12;</div>
+  <div g4>&frac14;</div>
+  <div g4>&frac14;</div>
 
-  <col4x3>&frac34;</col4x3>
-  <col4>&frac14;</col4>
+  <div g4x3>&frac34;</div>
+  <div g4>&frac14;</div>
 </block>
-
 
 <h3>Fifths</h3>
 
 <block class="eg">
-  <col5>&frac15;</col5>
-  <col5>&frac15;</col5>
-  <col5>&frac15;</col5>
-  <col5>&frac15;</col5>
-  <col5>&frac15;</col5>
+  <div g5>&frac15;</div>
+  <div g5>&frac15;</div>
+  <div g5>&frac15;</div>
+  <div g5>&frac15;</div>
+  <div g5>&frac15;</div>
 
   <row>
-    <col5x2>5x2<sup>ndths</sup> = &frac34;</col5x2>
-    <col5>&frac15;</col5>
-    <col5>&frac15;</col5>
-    <col5>&frac15;</col5>
+    <div g5x2>5x2<sup>ndths</sup> = &frac34;</div>
+    <div g5>&frac15;</div>
+    <div g5>&frac15;</div>
+    <div g5>&frac15;</div>
   </row>
 
-  <col5x3>&frac35;</col5x3>
-  <col5>&frac15;</col5>
-  <col5>&frac15;</col5>
+  <div g5x3>&frac35;</div>
+  <div g5>&frac15;</div>
+  <div g5>&frac15;</div>
 
-  <col5x4>&frac45;</col5x4>
-  <col5>&frac15;</col5>
+  <div g5x4>&frac45;</div>
+  <div g5>&frac15;</div>
 </block>
 
 
 <h3>Sixths</h3>
 
 <block class="eg">
-  <col6>&frac16;</col6>
-  <col6>&frac16;</col6>
-  <col6>&frac16;</col6>
-  <col6>&frac16;</col6>
-  <col6>&frac16;</col6>
-  <col6>&frac16;</col6>
+  <div g6>&frac16;</div>
+  <div g6>&frac16;</div>
+  <div g6>&frac16;</div>
+  <div g6>&frac16;</div>
+  <div g6>&frac16;</div>
+  <div g6>&frac16;</div>
 
   <row>
-    <col6x2>2x6<sup>ths</sup> = &frac13;</col6x2>
-    <col6>&frac16;</col6>
-    <col6>&frac16;</col6>
-    <col6>&frac16;</col6>
-    <col6>&frac16;</col6>
+    <div g6x2>2x6<sup>ths</sup> = &frac13;</div>
+    <div g6>&frac16;</div>
+    <div g6>&frac16;</div>
+    <div g6>&frac16;</div>
+    <div g6>&frac16;</div>
   </row>
 
   <row>
-    <col6x3>3x6<sup>ths</sup> = &frac12;</col6x3>
-    <col6>&frac16;</col6>
-    <col6>&frac16;</col6>
-    <col6>&frac16;</col6>
+    <div g6x3>3x6<sup>ths</sup> = &frac12;</div>
+    <div g6>&frac16;</div>
+    <div g6>&frac16;</div>
+    <div g6>&frac16;</div>
   </row>
 
-  <col6x4>4x6 = &frac23;</col6x4>
-  <col6>&frac16;</col6>
-  <col6>&frac16;</col6>
+  <div g6x4>4x6 = &frac23;</div>
+  <div g6>&frac16;</div>
+  <div g6>&frac16;</div>
 
-  <col6x5>&frac56;</col6x5>
-  <col6>&frac16;</col6>
+  <divx5>&frac56;</div>
+  <div>&frac16;</div>
 </block>
 
 
 <h3>Sevenths</h3>
 
 <block class="eg">
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
 
-  <col7x2>2/7</col7x2>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
+  <div g7x2>2/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
 
-  <col7x3>3/7</col7x3>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
+  <div g7x3>3/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
 
-  <col7x4>4/7</col7x4>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
+  <div g7x4>4/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
 
-  <col7x5>5/7</col7x5>
-  <col7>1/7</col7>
-  <col7>1/7</col7>
+  <div g7x5>5/7</div>
+  <div g7>1/7</div>
+  <div g7>1/7</div>
 
-  <col7x6>6/7</col7x6>
-  <col7>1/7</col7>
+  <div g7x6>6/7</div>
+  <div g7>1/7</div>
 </block>
 
 
 <h3>Eighths</h3>
 
 <block class="eg">
-  <col8>&frac18;</col8>
-  <col8>&frac18;</col8>
-  <col8>&frac18;</col8>
-  <col8>&frac18;</col8>
-  <col8>&frac18;</col8>
-  <col8>&frac18;</col8>
-  <col8>&frac18;</col8>
-  <col8>&frac18;</col8>
+  <div g8>&frac18;</div>
+  <div g8>&frac18;</div>
+  <div g8>&frac18;</div>
+  <div g8>&frac18;</div>
+  <div g8>&frac18;</div>
+  <div g8>&frac18;</div>
+  <div g8>&frac18;</div>
+  <div g8>&frac18;</div>
 
   <row>
-    <col8x2>2x8<sup>ths</sup> = &frac14;</col8x2>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
+    <div g8x2>2x8<sup>ths</sup> = &frac14;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
   </row>
 
   <row>
-    <col8x3>&frac38;</col8x3>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
+    <div g8x3>&frac38;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
   </row>
 
   <row>
-    <col8x4>4x8<sup>ths</sup> = &frac12;</col8x4>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
+    <div g8x4>4x8<sup>ths</sup> = &frac12;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
   </row>
 
   <row>
-    <col8x5>5x8<sup>ths</sup> = &frac58;</col8x5>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
+    <div g8x5>5x8<sup>ths</sup> = &frac58;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
   </row>
 
   <row>
-    <col8x6>6x8<sup>ths</sup> = &frac34;</col8x6>
-    <col8>&frac18;</col8>
-    <col8>&frac18;</col8>
+    <div g8x6>6x8<sup>ths</sup> = &frac34;</div>
+    <div g8>&frac18;</div>
+    <div g8>&frac18;</div>
   </row>
 
   <row>
-    <col8x7>7/8</col8x7>
-    <col8>&frac18;</col8>
+    <div g8x7>7/8</div>
+    <div g8>&frac18;</div>
   </row>
 
 </block>
+<!--
 
 <h2>HTML Tags</h2>
 
@@ -290,8 +291,8 @@
 <p>Here is an example:</p>
 
 <xmp>
-  <col3></col3>
-  <col3x2></col3x2>
+  <div></div>
+  <divx2></divx2>
 </xmp>
 
 <p>Using these tags makes it easier to catch errors in your editor as it will check that the blocks are closed correctly.</p>
@@ -301,8 +302,8 @@
 
 <xmp>
   <block>
-    <col3></col3>
-    <col3x2></col3x2>
+    <div></div>
+    <divx2></divx2>
   </block>
 </xmp>
 
@@ -310,38 +311,25 @@
 <h3>Rows</h3>
 <block class="eg">
   <row>
-    <col3>
+    <div>
       <h4>Equal</h4>
       <p>You can use different-content-height...</p>
-    </col3>
-    <col3>
+    </div>
+    <div>
       <h4>Height</h4>
       <p>...while maintaining identical-block-height across multiple columns, using the &lt;row&gt; tag around a set of &lt;col&gt; tags.</p>
-    </col3>
-    <col3>
+    </div>
+    <div>
       <h4>Blocks</h4>
       <p>So that's decent.</p>
-    </col3>
+    </div>
   </row>
 </block>
-
+ -->
 </container>
 
 
 
-
-  <guide>
-    <container>
-      <block>
-        <row>
-          <col4></col4>
-          <col4></col4>
-          <col4></col4>
-          <col4></col4>
-        </row>
-      </block>
-    </container>
-  </guide>
 
 </body>
 </html>

@@ -4,16 +4,37 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
+
   // Project configuration.
   grunt.initConfig({
 
     less: {
+      options: {
+        compress: true,
+        sourceMap: false,
+        plugins: [
+            (new (require('less-plugin-clean-css'))({
+              advanced: true,
+            }))
+        ],
+      },
       src: {
         expand: true,
         cwd:    "./",
         src:    "*.less",
         ext:    ".css",
       }
+      // waterfall: {
+      //   options: {
+      //     compress: true,
+      //     sourceMap: false,
+      //     plugins: [
+      //         (new (require('less-plugin-clean-css'))({
+      //           advanced: true,
+      //         }))
+      //     ],
+      //   },
+      // }
     },
 
     connect: {
