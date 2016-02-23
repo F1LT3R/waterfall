@@ -4,27 +4,27 @@
 @large: 1200px;
 @giant: 9999px;
 
-@col-padding: 0.4rem .4rem;
-// @col-padding: 1rem;
-@colc:  0.6rem 0.6rem;
+// @col-padding: 0.4rem .4rem;
+// // @col-padding: 1rem;
+// @colc:  0.6rem 0.6rem;
 
-// @colc:  0;
-@row-margin-top: 2px;
-@row-margin-bottom: 2px;
+// // @colc:  0;
+// @row-margin-top: 2px;
+// @row-margin-bottom: 2px;
 
-@guide: none;
-@guide-color: #f0f;
-
-
-@borderRadius: 1rem;
-
-@bgcol: fade(#fff, 30%);
-@bdcol: fade(#fff, 80%);
-@colText: #fff;
-@typeCol: #383838;
+// @guide: none;
+// @guide-color: #f0f;
 
 
-@half-width: @max-width/2;
+// @borderRadius: 1rem;
+
+// @bgcol: fade(#fff, 30%);
+// @bdcol: fade(#fff, 80%);
+// @colText: #fff;
+// @typeCol: #383838;
+
+
+// @half-width: @max-width/2;
 
 
 
@@ -33,10 +33,11 @@
 
 html {
   box-sizing: border-box;
-  font-size: 90%;
-  font-family: verdana;
-  color: @typeCol;
 }
+//   font-size: 90%;
+//   font-family: verdana;
+//   color: @typeCol;
+// }
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -57,33 +58,34 @@ block::after {
 
 
 
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
 .col () {
   float:left;
-  padding: .3rem .3rem;
 }
+//   padding: .3rem .3rem;
+// }
 
-body{
+// body{
   // background-image: url(
   //   http://avatarbox.net/avatars/img31/matrix_animated_avatar_picture_41280.gif
 
   //   )!important;
   // background-size: contain;
-}
+// }
 
 
-.pad {
-  padding: @colc;
-  border:1px solid @bdcol;
-  background: @bgcol;
-}
+// .pad {
+  // padding: @colc;
+  // border:1px solid @bdcol;
+  // background: @bgcol;
+// }
 
-[row][pad] > * > :first-child {
-  &:extend(.pad);
-}
+// [row][pad] > * > :first-child {
+//   &:extend(.pad);
+// }
 
 
 
@@ -108,7 +110,7 @@ container {
 // xs sm md lg xl
 
 @media (max-width: @giant) {
-  body{ background: #FA0; }
+  // body{ background: #FA0; }
 
   [g1]   { .col(); width: percentage(1);             }
   [g2]   { .col(); width: percentage(1/2);           }
@@ -143,7 +145,7 @@ container {
 
 
 @media (max-width: @large) {
-  body{ background: #0AC; }
+  // body{ background: #0AC; }
 
   [l1]   { .col(); width: percentage(1);             }
   [l2]   { .col(); width: percentage(1/2);           }
@@ -179,7 +181,7 @@ container {
 
 
 @media (max-width: @medium) {
-  body{ background: #CC0; }
+  // body{ background: #CC0; }
 
   [m1]   { .col(); width: percentage(1);             }
   [m2]   { .col(); width: percentage(1/2);           }
@@ -214,7 +216,7 @@ container {
 
 // Small <col s>
 @media (max-width: @small) {
-  body{ background: #0c0; }
+  // body{ background: #0c0; }
 
   [s1]   { .col(); width: percentage(1);             }
   [s2]   { .col(); width: percentage(1/2);           }

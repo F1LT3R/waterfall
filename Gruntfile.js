@@ -11,6 +11,8 @@ module.exports = function(grunt) {
     less: {
       options: {
         compress: true,
+        yuicompress: true,
+        optimization: 0,
         sourceMap: false,
         plugins: [
             (new (require('less-plugin-clean-css'))({
