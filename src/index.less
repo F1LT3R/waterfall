@@ -1,0 +1,106 @@
+
+@col-padding: 0.4rem .4rem;
+@col-padding: 1rem;
+@colc:  0.6rem 0.6rem;
+
+@row-margin-top: 2px;
+@row-margin-bottom: 2px;
+
+@borderRadius: 1rem;
+
+@bgcol: fade(#fff, 30%);
+@bdcol: fade(#fff, 80%);
+@colText: #fff;
+@typeCol: #383838;
+
+
+
+html {
+  box-sizing: border-box;
+  font-size: 90%;
+  font-family: verdana;
+  color: #383838;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+}
+
+[pad] > * > :first-child {
+  padding: 0.6rem 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+p {
+  text-align: left;
+}
+
+body {
+  line-height: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+xmp {
+  margin: 1rem 0 1rem 0;
+  text-shadow: none;
+}
+
+// Make sure new blocks always start after content above
+.block::after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+.block.eg div {
+  border:1px solid @bdcol;
+  background: @bgcol;
+  text-align: center;
+  color: @colText;
+  padding: @col-padding;
+  border-radius: @borderRadius;
+  margin-top: @row-margin-top;
+  margin-bottom: @row-margin-bottom;
+}
+
+
+
+
+
+@media (max-width: 9999px) {
+  body {
+    background: #FA0;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    background: #0AC;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    background: #CC0;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    background: #0c0;
+  }
+}
+

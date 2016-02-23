@@ -1,12 +1,16 @@
 module.exports = function(grunt) {
 
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
 
 
   // Project configuration.
   grunt.initConfig({
+
+    clean: {
+     // Clean directories before building
+      build: [
+        'dest/**',
+      ]
+    },
 
     less: {
       options: {
@@ -22,9 +26,10 @@ module.exports = function(grunt) {
       },
       src: {
         expand: true,
-        cwd:    "./",
-        src:    "*.less",
-        ext:    ".css",
+        cwd: 'src/',
+        src: '**/*.less',
+        dest: 'dest',
+        ext: '.css',
       }
       // waterfall: {
       //   options: {
@@ -43,28 +48,73 @@ module.exports = function(grunt) {
       site1: {
         options: {
           port: 8888,
-          base: './'
+          base: './dest'
         }
       },
     },
 
     watch: {
-      scripts: {
-        files: ['*.less'],
+      less: {
+        files: 'src/**/*.less',
         tasks: ['less'],
         options: {
           livereload: true,
         },
       },
       html: {
-        files: ['*.html', '*.js'],
+        files: 'src/**/*.html',
+        tasks: ['copy:html'],
         options: {
           livereload: true,
         },
       },
+      javascript: {
+        files: 'src/**/*.js',
+        tasks: ['copy:javascript'],
+        options: {
+          livereload: true,
+        },
+      },
+
     },
 
+    copy: {
+      'html': {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/',
+            src: '**/*.html',
+            dest: 'dest',
+          },
+        ],
+      },
+      javascript: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/',
+            src: '**/*.js',
+            dest: 'dest',
+          },
+        ],
+      },
+
+    }
   });
 
-  grunt.registerTask('default', ['less', 'connect', 'watch']);
+
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+
+  grunt.registerTask('default', [
+    'clean',
+    'copy',
+    'less',
+    'connect',
+    'watch'
+  ]);
 };
