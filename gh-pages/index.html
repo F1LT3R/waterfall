@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="core/waterfall.css" />
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+<a href="https://github.com/F1LT3R/waterfall"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+
+<div class="wf-container">
+
+  <h1>Waterfall</h1>
+
+  <div class="block" row pad>
+      <div class="s1 m4 l8 g1">
+        <p>Waterfall is a simple CSS layout grid based on fractions.</p>
+      </div>
+
+      <div class="s2 m4 l8x7 g1">
+        <p>Waterfall us designed for desktop and mobile and is compatible with Internet Explorer 9 and above.</p>
+      </div>
+
+      <div class="s2 m4 l8x7 g1">
+        <p>Waterfall is not standards compliant, because it uses custom HTML tags and attribute.</p>
+      </div>
+
+      <div class="s1 m4 l8 g1">
+        <p>Waterfall is at version v0.0.</p>
+      </div>
+  </div>
+
+  <h2>Responsive Columns</h2>
+
+  <xmp>
+    <div col class="s1 m3 l2 g4">A</div>
+    <div col class="s2 m6 l4 g4">B</div>
+    <div col class="s2 m3 l8 g4">C</div>
+    <div col class="s1 m6 l8 g4">D</div>
+  </xmp>
+
+  <div class="block eg">
+    <div class="s1 m3 l2 g4">A</div>
+    <div class="s2 m6 l4 g4">B</div>
+    <div class="s2 m3 l8 g4">C</div>
+    <div class="s1 m6 l8 g4">D</div>
+  </div>
+
+
+  <h2>Fractional Columns</h2>
+
+  <div class="block eg">
+    <div class="s1">1</div>
+
+    <div class="g2">&frac12;</div>
+    <div class="g2">&frac12;</div>
+
+    <div class="g3">&frac13;</div>
+    <div class="g3">&frac13;</div>
+    <div class="g3">&frac13;</div>
+
+    <div class="g4">&frac14;</div>
+    <div class="g4">&frac14;</div>
+    <div class="g4">&frac14;</div>
+    <div class="g4">&frac14;</div>
+
+    <div class="g5">&frac15;</div>
+    <div class="g5">&frac15;</div>
+    <div class="g5">&frac15;</div>
+    <div class="g5">&frac15;</div>
+    <div class="g5">&frac15;</div>
+
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+
+    <div class="g8">&frac18;</div>
+    <div class="g8">&frac18;</div>
+    <div class="g8">&frac18;</div>
+    <div class="g8">&frac18;</div>
+    <div class="g8">&frac18;</div>
+    <div class="g8">&frac18;</div>
+    <div class="g8">&frac18;</div>
+    <div class="g8">&frac18;</div>
+  </div>
+
+
+
+
+  <h2>Compounding Fractions</h2>
+
+  <h3>Thirds</h3>
+
+  <div class="block eg">
+    <div class="g3">&frac13;</div>
+    <div class="g3">&frac13;</div>
+    <div class="g3">&frac13;</div>
+    <div class="g3x2">&frac23;</div>
+    <div class="g3">&frac13;</div>
+  </div>
+
+
+  <h3>Forths</h3>
+
+  <div class="block eg">
+    <div class="g4">&frac14;</div>
+    <div class="g4">&frac14;</div>
+    <div class="g4">&frac14;</div>
+    <div class="g4">&frac14;</div>
+
+    <div class="g2">&frac12;</div>
+    <div class="g4">&frac14;</div>
+    <div class="g4">&frac14;</div>
+
+    <div class="g4x3">&frac34;</div>
+    <div class="g4">&frac14;</div>
+  </div>
+
+  <h3>Fifths</h3>
+
+  <div class="block eg">
+    <div class="g5">&frac15;</div>
+    <div class="g5">&frac15;</div>
+    <div class="g5">&frac15;</div>
+    <div class="g5">&frac15;</div>
+    <div class="g5">&frac15;</div>
+
+    <row>
+      <div class="g5x2">5x2<sup>ndths</sup> = &frac34;</div>
+      <div class="g5">&frac15;</div>
+      <div class="g5">&frac15;</div>
+      <div class="g5">&frac15;</div>
+    </row>
+
+    <div class="g5x3">&frac35;</div>
+    <div class="g5">&frac15;</div>
+    <div class="g5">&frac15;</div>
+
+    <div class="g5x4">&frac45;</div>
+    <div class="g5">&frac15;</div>
+  </div>
+
+
+  <h3>Sixths</h3>
+
+  <div class="block eg">
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+
+    <div class="g6x2">2x6<sup>ths</sup> = &frac13;</div>
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+
+    <div class="g6x3">3x6<sup>ths</sup> = &frac12;</div>
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+
+    <div class="g6x4">4x6 = &frac23;</div>
+    <div class="g6">&frac16;</div>
+    <div class="g6">&frac16;</div>
+
+    <div class="g6x5">&frac56;</div>
+    <div class="g5">&frac16;</div>
+  </div>
+
+
+  <h3>Sevenths</h3>
+
+  <div class="block eg">
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+
+    <div class="g7x2">2/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+
+    <div class="g7x3">3/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+
+    <div class="g7x4">4/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+
+    <div class="g7x5">5/7</div>
+    <div class="g7">1/7</div>
+    <div class="g7">1/7</div>
+
+    <div class="g7x6">6/7</div>
+    <div class="g7">1/7</div>
+  </div>
+
+
+  <h3>Eighths</h3>
+
+  <div class="block eg">
+    <div class="g8">&frac18;</div>
+    <div class="g8">&frac18;</div>
+    <div class="g8">&frac18;</div>
+    <div class="g8">&frac18;</div>
+    <div class="g8">&frac18;</div>
+    <div class="g8">&frac18;</div>
+    <div class="g8">&frac18;</div>
+    <div class="g8">&frac18;</div>
+
+    <row>
+      <div class="g8x2">2x8<sup>ths</sup> = &frac14;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+    </row>
+
+    <row>
+      <div class="g8x3">&frac38;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+    </row>
+
+    <row>
+      <div class="g8x4">4x8<sup>ths</sup> = &frac12;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+    </row>
+
+    <row>
+      <div class="g8x5">5x8<sup>ths</sup> = &frac58;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+    </row>
+
+    <row>
+      <div class="g8x6">6x8<sup>ths</sup> = &frac34;</div>
+      <div class="g8">&frac18;</div>
+      <div class="g8">&frac18;</div>
+    </row>
+
+    <row>
+      <div class="g8x7">7/8</div>
+      <div class="g8">&frac18;</div>
+    </row>
+
+  </div>
+  <!--
+
+  <h2>HTML Tags</h2>
+
+  <h3>Columns</h3>
+
+  <p>Here is an example:</p>
+
+  <xmp>
+    <div></div>
+    <divx2></divx2>
+  </xmp>
+
+  <p>Using these tags makes it easier to catch errors in your editor as it will check that the blocks are closed correctly.</p>
+
+
+  <h3>Blocks</h3>
+
+  <xmp>
+    <block>
+      <div></div>
+      <divx2></divx2>
+    </div>
+  </xmp>
+
+
+  <h3>Rows</h3>
+  <block class="eg">
+    <row>
+      <div>
+        <h4>Equal</h4>
+        <p>You can use different-content-height...</p>
+      </div>
+      <div>
+        <h4>Height</h4>
+        <p>...while maintaining identical-block-height across multiple columns, using the &lt;row&gt; tag around a set of &lt;col&gt; tags.</p>
+      </div>
+      <div>
+        <h4>Blocks</h4>
+        <p>So that's decent.</p>
+      </div>
+    </row>
+  </div>
+   -->
+</div> <!-- EOE: wf-container -->
+
+
+
+<script src="core/waterfall.js"></script>
+</body>
+</html>
+
+
