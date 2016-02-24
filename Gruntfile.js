@@ -1,6 +1,10 @@
 module.exports = function(grunt) {
 
-
+  var app = {
+    dest: 'gh-pages',
+    dist: 'dist',
+    src: 'src',
+  };
 
   // Project configuration.
   grunt.initConfig({
@@ -8,7 +12,8 @@ module.exports = function(grunt) {
     clean: {
      // Clean directories before building
       build: [
-        'dest/**',
+        app.dest + '/**',
+        app.dist + '/**',
       ]
     },
 
@@ -24,53 +29,52 @@ module.exports = function(grunt) {
             }))
         ],
       },
-      src: {
-        expand: true,
-        cwd: 'src/',
-        src: '**/*.less',
-        dest: 'dest',
-        ext: '.css',
-      }
-      // waterfall: {
-      //   options: {
-      //     compress: true,
-      //     sourceMap: false,
-      //     plugins: [
-      //         (new (require('less-plugin-clean-css'))({
-      //           advanced: true,
-      //         }))
-      //     ],
-      //   },
-      // }
+      pages: {
+          expand: true,
+          cwd: app.src + '/',
+          src: '**/*.less',
+          dest: app.dest,
+          ext: '.css',
+      },
+      distribute: {
+          expand: true,
+          cwd: app.src + '/core/',
+          src: '**/*.less',
+          dest: app.dist,
+          ext: '.css',
+      },
     },
 
     connect: {
       site1: {
         options: {
           port: 8888,
-          base: './dest'
+          base: app.dest
         }
       },
     },
 
     watch: {
       less: {
-        files: 'src/**/*.less',
+        files: app.src + '/**/*.less',
         tasks: ['less'],
         options: {
           livereload: true,
         },
       },
       html: {
-        files: 'src/**/*.html',
+        files: app.src + '/**/*.html',
         tasks: ['copy:html'],
         options: {
           livereload: true,
         },
       },
       javascript: {
-        files: 'src/**/*.js',
-        tasks: ['copy:javascript'],
+        files: app.src + '/**/*.js',
+        tasks: [
+          'copy:javascript-pages',
+          'copy:javascript-distribute',
+        ],
         options: {
           livereload: true,
         },
@@ -83,23 +87,34 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: 'src/',
+            cwd: app.src + '/',
             src: '**/*.html',
-            dest: 'dest',
+            dest: app.dest,
           },
         ],
       },
-      javascript: {
+      'javascript-pages': {
         files: [
           {
             expand: true,
-            cwd: 'src/',
+            cwd: app.src + '/',
             src: '**/*.js',
-            dest: 'dest',
+            dest: app.dest,
           },
         ],
       },
-
+      'javascript-distribute': {
+        files: [
+          {
+            expand: true,
+            cwd: app.src + '/',
+            src: '**/*.js',
+            dest: app.dist,
+            flatten: true,
+            filter: 'isFile',
+          },
+        ],
+      },
     }
   });
 
@@ -110,11 +125,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
 
-  grunt.registerTask('default', [
+  grunt.registerTask('build', [
     'clean',
     'copy',
     'less',
-    'connect',
-    'watch'
   ]);
+
+  grunt.registerTask('dev', [
+    'connect',
+    'watch',
+  ]);
+
+  grunt.registerTask('default', 'build');
+
 };
